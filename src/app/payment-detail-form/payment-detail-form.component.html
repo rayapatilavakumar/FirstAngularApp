@@ -1,0 +1,35 @@
+<form #form="ngForm" (submit)="onSubmit(form)" [class.submitted]="service.formSubmitted" novalidate autocomplete="off">
+    <input type="hidden" name="id" [value]="service.formData.id">
+
+<div class="mb-3">
+<label>User Name</label>
+<input class="form-control form-control-lg" #name="ngModel" name="name" [(ngModel)]="service.formData.name">
+
+</div>
+<div class="mb-3">
+    <label>Email</label>
+    <input class="form-control form-control-lg" #email="ngModel" name="email" [(ngModel)]="service.formData.email">
+    
+    </div>
+    <div class="mb-3">
+        <label>Phone</label>
+        <input class="form-control form-control-lg" #phone="ngModel" name="phone" [(ngModel)]="service.formData.phone">
+        
+        </div>
+        <div class="mb-3">
+            <label>Password</label>
+            <input class="form-control form-control-lg" #password="ngModel" name="phone" [(ngModel)]="service.formData.password" type="password">
+            
+            </div>
+            <div class="mb-3">
+                <label>Confirm Password</label>
+                <input class="form-control form-control-lg"  #confirmPasswordInput name="cpassword"   type="password">
+                
+                </div>
+                <div class="d-grid">
+                        <button class="btn btn-lg btn-success" type="submit">
+                          Submit
+                        </button>
+                        </div>
+
+</form>
